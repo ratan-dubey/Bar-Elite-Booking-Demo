@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Bookings | BarElite Premium Bar Service</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo-rd-studios.png">
+  <link rel="shortcut icon" href="assets/images/logo-rd-studios.png" type="image/png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8B0000',
+            gold: '#FFD700',
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar scrolled" id="navbar" role="navigation" aria-label="Main Navigation">
+  <a href="index.html" class="nav-logo">BAR<span>ELITE</span></a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#packages">Packages</a></li>
+    <li><a href="index.html#booking">Book</a></li>
+    <li><a href="dashboard.html" class="nav-cta" style="background: linear-gradient(135deg, var(--gold), #e6c200) !important; color: #0a0a0a !important; box-shadow: 0 0 15px var(--gold-glow) !important; border:none; border-radius: 4px;">Dashboard</a></li>
+  </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="index.html#packages">Packages</a>
+  <a href="index.html#booking">Book</a>
+  <a href="dashboard.html" style="color: var(--gold);">Dashboard</a>
+</nav>
+
+<!-- ==================== APP LAYOUT ==================== -->
+<div class="app-layout">
+  
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-profile reveal-left">
+      <img src="assets/images/logo-rd-studios.png" alt="Profile" loading="lazy" />
+      <div class="profile-info">
+        <h3>Ratan</h3>
+        <p>RD Studios</p>
+      </div>
+    </div>
+    
+    <ul class="sidebar-menu reveal-left reveal-delay-2">
+      <li><a href="dashboard.html"><span>⊞</span> &nbsp; Dashboard</a></li>
+      <li class="active"><a href="bookings.html"><span>📋</span> &nbsp; My Bookings</a></li>
+      <li><a href="index.html#booking"><span>🥂</span> &nbsp; Book Event</a></li>
+      <li style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1rem;">
+        <a href="index.html"><span>🚪</span> &nbsp; Logout</a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="app-main">
+    <div class="app-content">
+      
+      <div class="dashboard-header reveal">
+        <div class="dashboard-welcome">
+          <h3>History</h3>
+          <h2>My <span>Bookings</span> 📋</h2>
+        </div>
+      </div>
+
+      <!-- Bookings List -->
+      <div class="bookings-section" style="margin-top: 2rem;">
+
+        <!-- Booking 1 -->
+        <div class="booking-card reveal reveal-delay-1" style="padding: 1.75rem 2rem; border-left: 4px solid #2ecc71;">
+          <div class="booking-info">
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;"><span style="margin-right: 8px;">🥂</span> Premium Package</h4>
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+              <p><strong style="color:white; font-weight:500;">Guests:</strong> 100</p>
+              <p><strong style="color:white; font-weight:500;">Date:</strong> 15 Apr 2026</p>
+              <p><strong style="color:white; font-weight:500;">Event:</strong> Wedding</p>
+              <p><strong style="color:white; font-weight:500;">Price:</strong> ₹70,000</p>
+            </div>
+          </div>
+          <div class="booking-actions" style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
+            <span class="status-badge confirmed">Confirmed</span>
+            <a href="index.html#booking" class="book-again-btn" style="text-decoration: none;">Modify</a>
+          </div>
+        </div>
+
+        <!-- Booking 2 -->
+        <div class="booking-card reveal reveal-delay-2" style="padding: 1.75rem 2rem; border-left: 4px solid #3498db;">
+          <div class="booking-info">
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;"><span style="margin-right: 8px;">🎉</span> VIP Package</h4>
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+              <p><strong style="color:white; font-weight:500;">Guests:</strong> 200</p>
+              <p><strong style="color:white; font-weight:500;">Date:</strong> 20 Mar 2026</p>
+              <p><strong style="color:white; font-weight:500;">Event:</strong> Corporate Gala</p>
+              <p><strong style="color:white; font-weight:500;">Price:</strong> ₹2,40,000</p>
+            </div>
+          </div>
+          <div class="booking-actions" style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
+            <span class="status-badge" style="background: rgba(52,152,219,0.15); color: #3498db; border: 1px solid rgba(52,152,219,0.3);">Completed</span>
+            <a href="index.html#booking" class="book-again-btn" style="text-decoration: none;">Book Again</a>
+          </div>
+        </div>
+
+        <!-- Booking 3 -->
+        <div class="booking-card reveal reveal-delay-3" style="padding: 1.75rem 2rem; border-left: 4px solid #f39c12;">
+          <div class="booking-info">
+            <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;"><span style="margin-right: 8px;">🍸</span> Basic Package</h4>
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+              <p><strong style="color:white; font-weight:500;">Guests:</strong> 50</p>
+              <p><strong style="color:white; font-weight:500;">Date:</strong> 30 May 2026</p>
+              <p><strong style="color:white; font-weight:500;">Event:</strong> Private Party</p>
+              <p><strong style="color:white; font-weight:500;">Price:</strong> ₹20,000</p>
+            </div>
+          </div>
+          <div class="booking-actions" style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
+            <span class="status-badge pending">Pending</span>
+            <a href="index.html#booking" class="book-again-btn" style="text-decoration: none;">Cancel</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+</div>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script src="script.js"></script>
+
+</body>
+</html>

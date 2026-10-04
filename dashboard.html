@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | BarElite Premium Bar Service</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo-rd-studios.png">
+  <link rel="shortcut icon" href="assets/images/logo-rd-studios.png" type="image/png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8B0000',
+            gold: '#FFD700',
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar scrolled" id="navbar" role="navigation" aria-label="Main Navigation">
+  <a href="index.html" class="nav-logo">BAR<span>ELITE</span></a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#packages">Packages</a></li>
+    <li><a href="index.html#booking">Book</a></li>
+    <li><a href="dashboard.html" class="nav-cta" style="background: linear-gradient(135deg, var(--gold), #e6c200) !important; color: #0a0a0a !important; box-shadow: 0 0 15px var(--gold-glow) !important; border:none; border-radius: 4px;">Dashboard</a></li>
+  </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="index.html#packages">Packages</a>
+  <a href="index.html#booking">Book</a>
+  <a href="dashboard.html" style="color: var(--gold);">Dashboard</a>
+</nav>
+
+<!-- ==================== APP LAYOUT ==================== -->
+<div class="app-layout">
+  
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-profile reveal-left">
+      <img src="assets/images/logo-rd-studios.png" alt="Profile" loading="lazy" />
+      <div class="profile-info">
+        <h3>Ratan</h3>
+        <p>RD Studios</p>
+      </div>
+    </div>
+    
+    <ul class="sidebar-menu reveal-left reveal-delay-2">
+      <li class="active"><a href="dashboard.html"><span>⊞</span> &nbsp; Dashboard</a></li>
+      <li><a href="bookings.html"><span>📋</span> &nbsp; My Bookings</a></li>
+      <li><a href="index.html#booking"><span>🥂</span> &nbsp; Book Event</a></li>
+      <li style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1rem;">
+        <a href="index.html"><span>🚪</span> &nbsp; Logout</a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="app-main">
+    <div class="app-content">
+      
+      <div class="dashboard-header reveal">
+        <div class="dashboard-welcome">
+          <h3>Overview</h3>
+          <h2>Welcome, <span>Ratan</span> 👑</h2>
+        </div>
+        <div class="dash-date">
+          <p style="color: var(--text-muted); font-size: 0.75rem; letter-spacing: 1px;">TODAY</p>
+          <p>March 25, 2026</p>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid" style="margin-top: 2rem;">
+        <div class="stat-card total reveal reveal-delay-1">
+          <div class="stat-icon">📋</div>
+          <div class="stat-num" data-target="3">0</div>
+          <p class="stat-label">Total Bookings</p>
+        </div>
+        <div class="stat-card pending reveal reveal-delay-2">
+          <div class="stat-icon">⏳</div>
+          <div class="stat-num" data-target="1">0</div>
+          <p class="stat-label">Pending</p>
+        </div>
+        <div class="stat-card completed reveal reveal-delay-3">
+          <div class="stat-icon">✅</div>
+          <div class="stat-num" data-target="2">0</div>
+          <p class="stat-label">Completed</p>
+        </div>
+      </div>
+
+      <!-- Bookings List Overview -->
+      <div class="bookings-section reveal" style="margin-top: 2.5rem;">
+        <div style="display: flex; justify-content: space-between; align-items: baseline;">
+          <h3>Recent Booking</h3>
+          <a href="bookings.html" style="color: var(--gold); font-size: 0.8rem; text-decoration: none; text-transform: uppercase; font-weight: 600; letter-spacing: 1px;">View All →</a>
+        </div>
+
+        <!-- Booking 1 -->
+        <div class="booking-card">
+          <div class="booking-info">
+            <h4 style="color: var(--gold);"><span style="font-size: 1.2rem; vertical-align: middle; margin-right: 4px;">🥂</span> Premium Package</h4>
+            <p>100 Guests &nbsp;·&nbsp; Raj & Priya Wedding &nbsp;·&nbsp; 15 Apr 2026</p>
+          </div>
+          <div class="booking-actions">
+            <span class="status-badge confirmed">Confirmed</span>
+            <a href="index.html#booking" class="btn-outline" style="padding: 0.4rem 1rem; font-size: 0.75rem;">Book Again</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+</div>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script src="script.js"></script>
+
+</body>
+</html>

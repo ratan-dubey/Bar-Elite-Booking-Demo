@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Premium Bar Service for Weddings, Parties & Corporate Events. Book professional bartenders with a luxury experience." />
+  <title>BarElite — Premium Bar Service | RD Studios</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo-rd-studios.png">
+  <link rel="shortcut icon" href="assets/images/logo-rd-studios.png" type="image/png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#8B0000',
+            gold: '#FFD700',
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            inter: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main Navigation">
+  <a href="#home" class="nav-logo">BAR<span>ELITE</span></a>
+
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="index.html#packages">Packages</a></li>
+    <li><a href="index.html#booking">Book</a></li>
+    <li><a href="dashboard.html" class="nav-cta">Dashboard</a></li>
+  </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+  <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+  <a href="index.html">Home</a>
+  <a href="index.html#packages">Packages</a>
+  <a href="index.html#booking">Book</a>
+  <a href="dashboard.html">Dashboard</a>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="home">
+  <div class="hero-bg" role="img" aria-label="Luxury cocktail bar background"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">✦ Premium Bar Experience</div>
+
+    <h1 class="hero-title">
+      <span class="line1">Premium Bar Service</span>
+      <span class="line2">For Your Events</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Book professional bartenders with an exclusive, luxury experience. From weddings to corporate galas — we craft unforgettable moments.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#booking" class="btn-primary" id="heroBookBtn">
+        Book Now &nbsp;→
+      </a>
+      <a href="index.html#packages" class="btn-outline">
+        View Packages
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ==================== SERVICES ==================== -->
+<section class="services" id="services">
+  <div class="section-header">
+    <div class="section-tag reveal">What We Offer</div>
+    <h2 class="section-title reveal reveal-delay-1">
+      Tailored Bar Services <span>For Every Event</span>
+    </h2>
+    <p class="section-subtitle reveal reveal-delay-2">
+      From intimate celebrations to grand corporate galas — our expert team delivers extraordinary bar experiences.
+    </p>
+  </div>
+
+  <div class="services-grid">
+    <!-- Wedding Card -->
+    <article class="service-card reveal reveal-delay-1">
+      <div class="service-img-wrap">
+        <img src="assets/images/services-wedding.jpg" alt="Wedding bar service with champagne and crystal glasses" loading="lazy" />
+        <div class="service-img-overlay"></div>
+        <span class="service-badge">Bestseller</span>
+      </div>
+      <div class="service-body">
+        <div class="service-icon">💍</div>
+        <h3 class="service-title">Wedding Bars</h3>
+        <p class="service-desc">
+          Elevate your special day with champagne towers, signature cocktails, and impeccably dressed bartenders. Every detail crafted to perfection.
+        </p>
+        <a href="#booking" class="service-link">Book This Service →</a>
+      </div>
+    </article>
+
+    <!-- Party Card -->
+    <article class="service-card reveal reveal-delay-2">
+      <div class="service-img-wrap">
+        <img src="assets/images/services-party.jpg" alt="VIP party bar setup with premium cocktails" loading="lazy" />
+        <div class="service-img-overlay"></div>
+        <span class="service-badge">High Energy</span>
+      </div>
+      <div class="service-body">
+        <div class="service-icon">🥳</div>
+        <h3 class="service-title">Private Parties</h3>
+        <p class="service-desc">
+          Turn up the energy with premium cocktails, flair bartending, and vibrant drink menus designed to keep your guests coming back for more.
+        </p>
+        <a href="#booking" class="service-link">Book This Service →</a>
+      </div>
+    </article>
+
+    <!-- Corporate Card -->
+    <article class="service-card reveal reveal-delay-3">
+      <div class="service-img-wrap">
+        <img src="assets/images/services-corporate.jpg" alt="Corporate event bar setup with wine and whisky" loading="lazy" />
+        <div class="service-img-overlay"></div>
+        <span class="service-badge">Professional</span>
+      </div>
+      <div class="service-body">
+        <div class="service-icon">🏢</div>
+        <h3 class="service-title">Corporate Events</h3>
+        <p class="service-desc">
+          Project sophistication at your next conference or gala with curated wine selections, premium spirits, and white-glove service.
+        </p>
+        <a href="#booking" class="service-link">Book This Service →</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ==================== PACKAGES ==================== -->
+<section class="packages" id="packages">
+  <div class="section-header">
+    <div class="section-tag reveal">Pricing Plans</div>
+    <h2 class="section-title reveal reveal-delay-1">
+      Choose Your <span>Perfect Package</span>
+    </h2>
+    <p class="section-subtitle reveal reveal-delay-2">
+      Transparent pricing, no hidden fees. Every package includes professional setup and trained bartenders.
+    </p>
+  </div>
+
+  <div class="packages-grid">
+    <!-- Basic Package -->
+    <div class="pkg-card reveal reveal-delay-1">
+      <img src="assets/images/package-basic.png" alt="Basic Package Icon" class="pkg-icon" loading="lazy" />
+      <p class="pkg-name">Basic</p>
+      <div class="pkg-price">
+        <span class="amount">₹400</span>
+        <span class="unit">/ person</span>
+      </div>
+      <p class="pkg-tagline">Perfect for small gatherings and budget-conscious events.</p>
+      <ul class="pkg-features">
+        <li><span class="check">✓</span> 2 Professional Bartenders</li>
+        <li><span class="check">✓</span> Basic Drink Menu</li>
+        <li><span class="check">✓</span> Standard Glassware</li>
+        <li><span class="check">✓</span> 4-Hour Service</li>
+        <li><span class="check">✓</span> Basic Setup</li>
+      </ul>
+      <button class="pkg-btn" onclick="selectPackage('basic')" id="basicPkgBtn">Select Basic</button>
+    </div>
+
+    <!-- Premium Package (Featured) -->
+    <div class="pkg-card featured reveal reveal-delay-2">
+      <div class="popular-badge">⭐ Most Popular</div>
+      <img src="assets/images/package-premium.png" alt="Premium Package Icon" class="pkg-icon" loading="lazy" />
+      <p class="pkg-name" style="color: var(--gold);">Premium</p>
+      <div class="pkg-price">
+        <span class="amount">₹700</span>
+        <span class="unit">/ person</span>
+      </div>
+      <p class="pkg-tagline">Our signature experience — perfect for weddings and luxury parties.</p>
+      <ul class="pkg-features">
+        <li><span class="check">✓</span> 4 Professional Bartenders</li>
+        <li><span class="check">✓</span> Premium Drink Selection</li>
+        <li><span class="check">✓</span> Elegant Glassware</li>
+        <li><span class="check">✓</span> Bar Decoration Included</li>
+        <li><span class="check">✓</span> 6-Hour Service</li>
+        <li><span class="check">✓</span> Cocktail Menu Design</li>
+      </ul>
+      <button class="pkg-btn featured-btn" onclick="selectPackage('premium')" id="premiumPkgBtn">Select Premium</button>
+    </div>
+
+    <!-- VIP Package -->
+    <div class="pkg-card reveal reveal-delay-3">
+      <img src="assets/images/package-vip.png" alt="VIP Package Icon" class="pkg-icon" loading="lazy" />
+      <p class="pkg-name">VIP</p>
+      <div class="pkg-price">
+        <span class="amount">₹1200</span>
+        <span class="unit">/ person</span>
+      </div>
+      <p class="pkg-tagline">The ultimate experience — no limits, just luxury.</p>
+      <ul class="pkg-features">
+        <li><span class="check">✓</span> Unlimited Bartenders</li>
+        <li><span class="check">✓</span> Unlimited Premium Drinks</li>
+        <li><span class="check">✓</span> Live Cocktail Show</li>
+        <li><span class="check">✓</span> VIP Crystal Glassware</li>
+        <li><span class="check">✓</span> Full-Day Service</li>
+        <li><span class="check">✓</span> Personalized Mixologist</li>
+      </ul>
+      <button class="pkg-btn" onclick="selectPackage('vip')" id="vipPkgBtn">Select VIP</button>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CALCULATOR ==================== -->
+<section class="calculator" id="calculator">
+  <div class="section-header">
+    <div class="section-tag reveal">Instant Quote</div>
+    <h2 class="section-title reveal reveal-delay-1">
+      Live <span>Price Calculator</span>
+    </h2>
+    <p class="section-subtitle reveal reveal-delay-2">
+      Get an instant estimate for your event. No commitments required.
+    </p>
+  </div>
+
+  <div class="calc-wrapper reveal">
+    <div class="calc-grid">
+      <div class="calc-field">
+        <label for="calcGuests">Number of Guests</label>
+        <input
+          type="number"
+          id="calcGuests"
+          min="1"
+          max="5000"
+          placeholder="e.g. 150"
+          aria-label="Number of guests"
+        />
+      </div>
+
+      <div class="calc-field">
+        <label for="calcPackage">Select Package</label>
+        <div class="select-wrap">
+          <select id="calcPackage" aria-label="Select package">
+            <option value="basic">Basic — ₹400/person</option>
+            <option value="premium" selected>Premium — ₹700/person</option>
+            <option value="vip">VIP — ₹1200/person</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-result">
+      <p class="calc-label">Estimated Total Price</p>
+      <div class="calc-amount" id="calcResult">₹0</div>
+      <p class="calc-note">* Final pricing subject to confirmation. GST extra.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== BOOKING FORM ==================== -->
+<section class="booking" id="booking">
+  <div class="booking-container">
+    <div class="section-header">
+      <div class="section-tag reveal">Get Started</div>
+      <h2 class="section-title reveal reveal-delay-1">
+        Book Your <span>Bar Service</span>
+      </h2>
+      <p class="section-subtitle reveal reveal-delay-2">
+        Fill in your details and we'll reach out within 24 hours with a custom quote.
+      </p>
+    </div>
+
+    <div class="form-glass reveal">
+      <form id="bookingForm" novalidate>
+        <div class="form-row">
+          <!-- Name -->
+          <div class="form-group">
+            <input type="text" id="bookName" placeholder=" " autocomplete="name" />
+            <label for="bookName">Full Name *</label>
+          </div>
+          <!-- Phone -->
+          <div class="form-group">
+            <input type="tel" id="bookPhone" placeholder=" " autocomplete="tel" />
+            <label for="bookPhone">Phone Number *</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <!-- Guests -->
+          <div class="form-group">
+            <input type="number" id="bookGuests" placeholder=" " min="1" />
+            <label for="bookGuests">Number of Guests</label>
+          </div>
+          <!-- Date -->
+          <div class="form-group">
+            <input type="date" id="bookDate" placeholder=" " />
+            <label for="bookDate">Event Date</label>
+          </div>
+        </div>
+
+        <!-- Package -->
+        <div class="form-group" style="position: relative;">
+          <select id="bookPackage" style="padding: 0.85rem 1.1rem;">
+            <option value="" disabled selected>Choose a Package</option>
+            <option value="basic">Basic — ₹400/person</option>
+            <option value="premium">Premium — ₹700/person</option>
+            <option value="vip">VIP — ₹1200/person</option>
+          </select>
+          <span class="select-icon">▾</span>
+        </div>
+
+        <button type="submit" class="btn-primary form-submit" id="bookSubmitBtn">
+          Submit Booking Request &nbsp;→
+        </button>
+
+        <p class="form-note">
+          🔒 This is a demo. No real data is stored or transmitted.
+        </p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ==================== FOOTER ==================== -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">BARELITE</div>
+    <div class="footer-divider"></div>
+    <p class="footer-text">
+      This is a demo by <span class="studio">Ratan</span> from <span class="studio">RD Studios</span>
+    </p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#booking">Book Now</a>
+    </div>
+    <p class="footer-bottom">
+      © 2026 BarElite — RD Studios. Premium Bar Services Demo.
+    </p>
+  </div>
+</footer>
+
+<!-- ==================== SCRIPTS ==================== -->
+<script src="script.js"></script>
+
+</body>
+</html>
